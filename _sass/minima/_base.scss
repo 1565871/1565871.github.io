@@ -97,6 +97,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
+.home .post-list-heading {
+  font-size: 3em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 
 
 /**
@@ -105,6 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  margin: 0 0 0 10px;
 
   &:visited {
     color: darken($brand-color, 15%);
@@ -112,7 +118,8 @@ a {
 
   &:hover {
     color: $text-color;
-    text-decoration: underline;
+    text-decoration: none;
+    padding: 0 0 0 20px;
   }
 
   .social-media-list &:hover {
@@ -175,8 +182,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 1.5));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 1.5));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -189,6 +196,12 @@ pre {
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
+}
+
+.page-content .wrapper {
+  padding-left: 50px;
+  background-color: $inner-bg-color;
+  border-radius: 5% 30% 50% 10%;
 }
 
 

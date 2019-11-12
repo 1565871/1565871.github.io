@@ -5,7 +5,7 @@
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
-  background-color: rgb(235, 246, 246);
+  background-color: $inner-bg-color;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -22,6 +22,11 @@
   &,
   &:visited {
     color: $grey-color-dark;
+  }
+  &:hover {
+    text-decoration: none;
+    color: rgb(40, 70, 71);
+    font-size: 1.5em;
   }
 }
 
@@ -40,10 +45,22 @@
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+      content: ""
+    }
+    &::before {
+      
+      content: "| "
+    }
+    &:hover {
+      text-decoration: none;
+      color: rgb(40, 70, 71);
+      font-size: 1em;
     }
   }
 
@@ -109,6 +126,7 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background-color: $inner-bg-color;
 }
 
 .footer-heading {
@@ -177,6 +195,7 @@
  * Page content
  */
 .page-content {
+  background-color: rgb(255, 255, 255);
   padding: $spacing-unit 0;
   flex: 1;
 }
@@ -228,7 +247,7 @@
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: 100px;
 
   h2 {
     @include relative-font-size(2);
